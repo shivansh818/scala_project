@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-03-04T00:00:00.000Z" agent="Claude" version="24.0.0" type="device">
+  <diagram id="architecture" name="Architecture Diagram">
+    <mxGraphModel dx="2200" dy="1400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- ==================== GROUP: ON-PREMISE ==================== -->
+        <mxCell id="grp_onprem" value="ON-PREMISE" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="40" width="140" height="260" as="geometry"/>
+        </mxCell>
+        <mxCell id="spark" value="Apache Spark" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#ED7100;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.general_AWScloud;" vertex="1" parent="1">
+          <mxGeometry x="55" y="80" width="48" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="hdfs" value="HDFS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="45" y="220" width="80" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== GROUP: DATA INGESTION ==================== -->
+        <mxCell id="grp_ingestion" value="DATA INGESTION" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fillColor=#E8F5E9;strokeColor=#4CAF50;dashed=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="220" y="60" width="280" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="s3_ingest" value="Amazon S3" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#3F8624;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" vertex="1" parent="1">
+          <mxGeometry x="240" y="100" width="40" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="s3event_ingest" value="S3 Event" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#3F8624;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" vertex="1" parent="1">
+          <mxGeometry x="310" y="100" width="40" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="lambda_ingest" value="Lambda Trigger" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#ED7100;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" vertex="1" parent="1">
+          <mxGeometry x="400" y="100" width="40" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== GROUP: ON-PREM REPORT TRANSFER ==================== -->
+        <mxCell id="grp_report_transfer" value="ON-PREM REPORT TRANSFER" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fillColor=#E8F5E9;strokeColor=#4CAF50;dashed=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="220" y="280" width="290" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="s3_report" value="Amazon S3" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#3F8624;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" vertex="1" parent="1">
+          <mxGeometry x="240" y="320" width="40" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="s3event_report" value="S3 Event" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#3F8624;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" vertex="1" parent="1">
+          <mxGeometry x="310" y="320" width="40" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="lambda_report" value="Lambda Trigger" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#ED7100;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" vertex="1" parent="1">
+          <mxGeometry x="400" y="320" width="40" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== GROUP: DATA PROCESSING ==================== -->
+        <mxCell id="grp_processing" value="DATA PROCESSING" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fillColor=#E3F2FD;strokeColor=#1976D2;dashed=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="560" y="40" width="300" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="emr_process" value="Amazon EMR" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#8C4FFF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.emr;" vertex="1" parent="1">
+          <mxGeometry x="590" y="130" width="48" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="mongo_cbs" value="MongoDB CBS" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=6;fillColor=#333333;fontColor=#ffffff;strokeColor=#333333;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="720" y="65" width="80" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="mongo_cc" value="MongoDB CC" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=6;fillColor=#333333;fontColor=#ffffff;strokeColor=#333333;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="720" y="130" width="80" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="mongo_upi" value="MongoDB UPI" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=6;fillColor=#333333;fontColor=#ffffff;strokeColor=#333333;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="720" y="200" width="80" height="45" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== GROUP: APPLICATION LAYER ==================== -->
+        <mxCell id="grp_app" value="APPLICATION LAYER" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fillColor=#FFF3E0;strokeColor=#FF9800;dashed=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="920" y="40" width="320" height="230" as="geometry"/>
+        </mxCell>
+        <mxCell id="eks" value="Amazon EKS" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#ED7100;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.eks;" vertex="1" parent="1">
+          <mxGeometry x="950" y="90" width="48" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="ui_service" value="UI Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="75" width="100" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="report_service" value="Report Processing Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="160" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== GROUP: STORAGE ==================== -->
+        <mxCell id="grp_storage" value="STORAGE" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fillColor=#E8F5E9;strokeColor=#4CAF50;dashed=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="60" width="160" height="260" as="geometry"/>
+        </mxCell>
+        <mxCell id="aurora" value="Aurora RDS" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#2E27AD;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.aurora;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="100" width="48" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="efs" value="Amazon EFS" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#3F8624;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.efs;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="220" width="48" height="48" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== GROUP: REPORT SERVING ==================== -->
+        <mxCell id="grp_serving" value="REPORT SERVING" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fillColor=#F3E5F5;strokeColor=#9C27B0;dashed=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="1530" y="170" width="160" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="nginx" value="Nginx File Server" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ffffff;strokeColor=#333333;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1555" y="210" width="110" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== USERS ==================== -->
+        <mxCell id="users" value="Users" style="shape=mxgraph.aws4.users;fillColor=#232F3E;fontColor=#232F3E;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1750" y="130" width="48" height="48" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== GROUP: ORCHESTRATION ==================== -->
+        <mxCell id="grp_orch" value="ORCHESTRATION" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fillColor=#FFFDE7;strokeColor=#FBC02D;dashed=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="560" y="420" width="500" height="310" as="geometry"/>
+        </mxCell>
+        <mxCell id="airflow" value="Apache Airflow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="590" y="470" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="smtp" value="SMTP Server" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="780" y="470" width="110" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="emr_orch" value="Amazon EMR" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#8C4FFF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.emr;" vertex="1" parent="1">
+          <mxGeometry x="618" y="555" width="44" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="sns" value="Amazon SNS" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#E7157B;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sns;" vertex="1" parent="1">
+          <mxGeometry x="790" y="555" width="44" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="eventbridge" value="Amazon EventBridge" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#E7157B;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.eventbridge;" vertex="1" parent="1">
+          <mxGeometry x="618" y="650" width="44" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="efs_lambda" value="EFS Purge Lambda" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#ED7100;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" vertex="1" parent="1">
+          <mxGeometry x="790" y="650" width="44" height="44" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== IDP TEAM ==================== -->
+        <mxCell id="idp_team" value="IDP Team" style="shape=mxgraph.aws4.users;fillColor=#232F3E;fontColor=#232F3E;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="560" width="40" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== CONNECTIONS ==================== -->
+        <mxCell id="e1" value="push processed data" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;fontColor=#666666;" edge="1" source="spark" target="s3_ingest" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="push on-prem report outputs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;fontColor=#666666;" edge="1" source="hdfs" target="s3_report" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="s3_ingest" target="s3event_ingest" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="s3event_ingest" target="lambda_ingest" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" value="start EMR ingestion job" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;fontColor=#666666;" edge="1" source="lambda_ingest" target="emr_process" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="s3_report" target="s3event_report" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="s3event_report" target="lambda_report" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" value="ingestion" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;fontColor=#666666;" edge="1" source="emr_process" target="mongo_cbs" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9" value="ingestion" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;fontColor=#666666;" edge="1" source="emr_process" target="mongo_cc" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10" value="ingestion" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;fontColor=#666666;" edge="1" source="emr_process" target="mongo_upi" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e11" value="data fetch" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;fontColor=#666666;" edge="1" source="mongo_cc" target="report_service" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="eks" target="ui_service" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="eks" target="report_service" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e14" value="update database" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;fontColor=#666666;" edge="1" source="report_service" target="aurora" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e15" value="store reports" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;fontColor=#666666;" edge="1" source="report_service" target="efs" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e16" value="output reports transfer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;fontColor=#666666;" edge="1" source="lambda_report" target="efs" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="efs" target="nginx" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e18" value="serve reports" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;fontColor=#666666;" edge="1" source="nginx" target="users" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="aurora" target="users" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e20" value="send report emails" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;fontColor=#666666;" edge="1" source="airflow" target="smtp" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e21" value="trigger report generation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;fontColor=#666666;" edge="1" source="airflow" target="report_service" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e22" value="ingestion failure notifications" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;fontColor=#666666;" edge="1" source="emr_orch" target="sns" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e23" value="failure logging" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;fontColor=#666666;" edge="1" source="sns" target="idp_team" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e24" value="scheduled trigger" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;fontColor=#666666;" edge="1" source="eventbridge" target="efs_lambda" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e25" value="delete old reports" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;fontColor=#666666;" edge="1" source="efs_lambda" target="efs" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
